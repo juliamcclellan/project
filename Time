@@ -1,0 +1,18 @@
+class Time
+	
+	initialize(minute, hour, day, month, year)
+		@minute = minute
+		@hour = hour
+		@day = day
+		@month = month
+		@year = year
+	end
+	
+	attr_reader :@minute
+	attr_reader :@hour
+	attr_reader :@day
+	attr_reader :@month
+	attr_reader :@year
+	
+end
+
