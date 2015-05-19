@@ -1,7 +1,7 @@
 class Entry
   
-  initialize(time, name)
-    @time = time
+  initialize(time_entry, name)
+    @time_entry = time_entry
     @name = name
   end
   
