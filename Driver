@@ -1,2 +1,4 @@
-time_party = Time.new(9, 11, 19, 5, 15)
-party = Event.new(
+time_party = Time.new(0, 10, 22, 5, 15)
+time_entered = Time.new(18, 11, 19, 5, 
+party = Event.new(time_entered, "Julia and Lily", time_party, "Birthday Party")
+
