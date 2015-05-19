@@ -1,13 +1,16 @@
 class Event < Entry
   
-  initialize(time_entry, name, name_event, time_event)
-    super
+  initialize(name_event, time_event)
     @name_event = name_event
     @time_event = time_event
   end
     
   def add_event_detail(name_detail, detail)
     @#{name_detail} = detail
+  end
+  
+  def eventString
+    "#{name_event} will happen at #{time_event}"
   end
   
 end
