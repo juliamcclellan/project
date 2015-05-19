@@ -14,4 +14,5 @@ class Entry
     "#{name} made an entry at #{time_entry}: entry"
   end
 
-end
+#to end the class, use $end instead of just end
+$end
