@@ -14,5 +14,9 @@ class Time
 	attr_reader :@month
 	attr_reader :@year
 	
+	def toString
+		"#{hour}:#{minute}, #{month}/#{day}/#{year}"
+	end
+	
 end
 
