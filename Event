@@ -1,0 +1,13 @@
+class Event < Entry
+  
+  initialize(time_entry, name, name_event, time_event)
+    super
+    @name_event = name_event
+    @time_event = time_event
+  end
+    
+  def add_event_detail(name_detail, detail)
+    @#{name_detail} = detail
+  end
+  
+end
