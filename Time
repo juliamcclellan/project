@@ -13,16 +13,16 @@ class Time
 				puts "#{time} was an invalid input. Please enter a positive integer."
 				time = gets.chomp
 			end}
-		[@minute, hour, day, month, year].each(&check)
+		[@minute, @hour, day, month, year].each(&check)
 		
 		#checks whether the numbers entered are valid and changes them if they are not
 		if @minute > 60
-			hour += (@minute / 60).floor
+			@hour += (@minute / 60).floor
 			@minute %= 60
 		end
-		if hour > 24
-			day += (hour / 24).floor
-			hour %= 24
+		if @hour > 24
+			day += (@hour / 24).floor
+			@hour %= 24
 		end
 		
 		#checks the day differently depending on what month in is
