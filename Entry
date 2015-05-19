@@ -10,7 +10,7 @@ class Entry
   end
   
   def entryString
-    "#{name}, an entry entered at #{time_entry}"
+    "#{name} made an entry at #{time_entry}"
   end
 
 end
