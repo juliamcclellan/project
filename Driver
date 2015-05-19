@@ -1,2 +1,2 @@
-time_party = Time.new(
+time_party = Time.new(9, 11, 19, 5, 15)
 party = Event.new(
