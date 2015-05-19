@@ -10,4 +10,6 @@ graduation = Event.new(time_entered_graduation, "Julia and Lily", "Middlesex sch
 calendar = EntryRecord.new
 
 calendar.add_entry(presentation)
-calendar.add_entru(graduation)
+calendar.add_entry(graduation)
+
+calendar.print_record
