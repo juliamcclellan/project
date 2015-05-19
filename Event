@@ -10,7 +10,7 @@ class Event < Entry
   end
   
   def eventString
-    "#{name_event} will happen at #{time_event}"
+    "#{name_event}(#{entry}) will happen at #{time_event}, hosted by #{name}"
     #Note that no return statement is needed because Ruby without a return statement, ruby by default returns the last evaluated expression 
   end
   
