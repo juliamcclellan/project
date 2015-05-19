@@ -14,4 +14,4 @@ class Event < Entry
     #Note that no return statement is needed because Ruby without a return statement, ruby by default returns the last evaluated expression 
   end
   
-end
+$end
