@@ -1,6 +1,23 @@
 class Time
 	
 	initialize(minute, hour, day, month, year)
+		#verifies that the actual parameters were numbers
+		check = Proc.new {|time|
+			until time.is_a? Integer && time > 0
+				puts "#{time} was an invalid input. Please enter a positive integer."
+				time = gets.chomp
+			end}
+		for [minute, hour, day, month, year].each(&check)
+		#checks whether the numbers entered are valid and changes them if they are not
+		if minute > 60
+			hour += minute / 60
+			minute %= 60
+		end
+		if hour > 24
+			day += hour / 24
+			hour %= 24
+		end
+		
 		@minute = minute
 		@hour = hour
 		@day = day
