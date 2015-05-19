@@ -7,9 +7,9 @@ class EntryRecord
   
   def add_entry(entry)
     @entry_arr.push(entry)
-    #the push mehtod adds the input element to the array
+      #the push mehtod adds the input element to the array
     update_num_of_entries
-    #calls the private method above
+      #calls the private method above
     @entry_arr.sort!
       #Sorts the array for us!!!! 
       #Also note the ! at the end of the sort method call... applies the changes permanently to @entry_arr
@@ -19,7 +19,7 @@ class EntryRecord
     @entry_arr.delete(entry) if entry.is_a? (Entry)
      #Note the syntax of the single-line if statement above
     update_num_of_entries if @num_of_entries >= 0
-    @entru_arr.sort!
+    @entry_arr.sort!
   end
   
   private
