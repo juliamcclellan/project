@@ -1,6 +1,6 @@
 class Time
 	
-	initialize(minute, hour, day, month, year)
+	def initialize(minute, hour, day, month, year)
 		@minute = minute
 		@hour = hour
 		@day = day
@@ -43,11 +43,11 @@ class Time
 		end
 	end
 	
-	attr_reader :@minute
-	attr_reader :@hour
-	attr_reader :@day
-	attr_reader :@month
-	attr_reader :@year
+	attr_reader :minute
+	attr_reader :hour
+	attr_reader :day
+	attr_reader :month
+	attr_reader :year
 	
 	def toString
 		"#{hour}:#{minute}, #{month}/#{day}/#{year}"
@@ -55,3 +55,5 @@ class Time
 	
 $end
 
+time = Time.new(3, 6, 19, 5, 15)
+puts time.toString
