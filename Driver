@@ -1,0 +1,2 @@
+time_party = Time.new(
+party = Event.new(
