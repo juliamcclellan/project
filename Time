@@ -1,12 +1,12 @@
 class Time
-	
 	def initialize(minute, hour, day, month, year)
 		@minute = minute
 		@hour = hour
 		@day = day
 		@month = month
 		@year = year
-		verify_time #verifies that the time entered was valid
+		#verifies that the time entered was valid
+		verify_time
 	end
 	
 	def verify_time
@@ -57,6 +57,3 @@ class Time
 	end
 	
 end
-
-time = Time.new(3, 6, 19, 5, 15)
-puts time.toString
