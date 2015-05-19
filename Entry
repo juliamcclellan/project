@@ -1,8 +1,9 @@
 class Entry
   
-  initialize(time_entry, name)
+  initialize(time_entry, name, entry)
     @time_entry = time_entry
     @name = name
+    @entry = entry
   end
   
   def add_collaborator(collaborator)
@@ -10,7 +11,7 @@ class Entry
   end
   
   def entryString
-    "#{name} made an entry at #{time_entry}"
+    "#{name} made an entry at #{time_entry}: entry"
   end
 
 end
