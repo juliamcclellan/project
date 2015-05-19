@@ -8,5 +8,9 @@ class Entry
   def add_collaborator(collaborator)
     @collaborator = collaborator
   end
+  
+  def entryString
+    "#{name}, an entry entered at #{time_entry}"
+  end
 
 end
