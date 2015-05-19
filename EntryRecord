@@ -1,0 +1,30 @@
+class EntryRecord
+
+  initialize
+    @entry_arr = Array.new
+    @num_of_entries = @entry_arr.length
+  end
+  
+  def add_entry(entry)
+    @entry_arr.push(entry)
+    #the push mehtod adds the input element to the array
+    update_num_of_entries
+    #calls the private method above
+    @entry_arr.sort!
+      #Sorts the array for us!!!! 
+      #Also note the ! at the end of the sort method call... applies the changes permanently to @entry_arr
+  end
+  
+  def remove_entry(entry)
+    @entry_arr.delete(entry) if entry.is_a? (Entry)
+     #Note the syntax of the single-line if statement above
+    update_num_of_entries if @num_of_entries >= 0
+    @entru_arr.sort!
+  end
+  
+  private
+  def update_num_of_entries
+    @num_of_entries = @entry_arr.length
+  end
+
+end
