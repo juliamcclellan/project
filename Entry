@@ -1,0 +1,12 @@
+class Entry
+  
+  initialize(time, name)
+    @time = time
+    @name = name
+  end
+  
+  def add_collaborator(collaborator)
+    @collaborator = collaborator
+  end
+
+end
