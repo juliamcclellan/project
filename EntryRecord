@@ -26,5 +26,10 @@ class EntryRecord
   def update_num_of_entries
     @num_of_entries = @entry_arr.length
   end
+  
+  def print_record
+    @entry_arr.each { |entry| puts entry }
+      #for each element named entry in @entry_arr, puts entry
+  end
 
 end
