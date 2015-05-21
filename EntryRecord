@@ -16,7 +16,7 @@ class EntryRecord
   end
   
   def remove_entry(entry)
-    @entry_arr.delete(entry) if entry.is_a? (Entry)
+    @entry_arr.delete(entry) if entry.is_a?(Entry)
      #Note the syntax of the single-line if statement above
     update_num_of_entries if @num_of_entries >= 0
     @entry_arr.sort!
