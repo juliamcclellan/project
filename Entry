@@ -1,17 +1,16 @@
 class Entry
   
+  #methods that create a new instance of an object are called initialize
   def initialize(time_entry, name, entry)
+    #the @ sign designates an instance variable
     @time_entry = time_entry
     @name = name
     @entry = entry
   end
   
-  def add_collaborator(collaborator)
-    @collaborator = collaborator
-  end
-  
   def entryString
+    # using #{variable_name} wil print the data stored in the variable
     "#{@name} made an entry at #{@time_entry.toString}: #{@entry}"
   end
-
+  
 end
