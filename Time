@@ -14,9 +14,11 @@ class Time
 		check = Proc.new {|time|
 			until time.is_a?(Integer) && time >= 0
 				puts "#{time} was an invalid input. Please enter a positive integer."
+				#gets.chomp is the equivalent of scan.nextLine
 				time = gets.chomp
 			end}
 		[@minute, @hour, @day, @month, @year].each(&check)
+		# &check converts the Proc to a block
 		
 		#checks whether the numbers entered are valid and changes them if they are not
 		if @minute > 60
@@ -48,6 +50,7 @@ class Time
 	
 	def toString
                 minute = @minute
+                #makes sure the output prints correctly
                 if minute == 0
                     minute = "00"
                 end
