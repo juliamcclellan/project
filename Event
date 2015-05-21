@@ -7,6 +7,7 @@ class Event < Entry
     @time_event = time_event
   end
   
+  #Returns a string describing the event
   def eventString
     "#{@name_event}(#{@entry}) will happen at #{@time_event.toString}, entered by #{@name}"
     #Note that no return statement is needed because Ruby without a return statement, ruby by default returns the last evaluated expression 
