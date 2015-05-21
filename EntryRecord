@@ -4,7 +4,7 @@ class EntryRecord
     @entry_arr = Array.new
     @num_of_entries = @entry_arr.length
   end
-  
+
   def add_entry(entry)
     @entry_arr.push(entry)
       #the push mehtod adds the input element to the array
@@ -25,6 +25,7 @@ class EntryRecord
   private
   def update_num_of_entries
     @num_of_entries = @entry_arr.length
+    #used after an element is added or removed from the array
   end
   
   public
