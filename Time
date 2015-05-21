@@ -47,7 +47,10 @@ class Time
 	end
 	
 	def toString
-		"#{@hour}:#{@minute}, #{@month}/#{@day}/#{@year}"
+                minute = @minute
+                if minute == 0
+                    minute = "00"
+                end
+		"#{@hour}:#{minute}, #{@month}/#{@day}/#{@year}"
 	end
-	
 end
