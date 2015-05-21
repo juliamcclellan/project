@@ -11,7 +11,7 @@ class Entry
   end
   
   def entryString
-    "#{name} made an entry at #{time_entry}: entry"
+    "#{@name} made an entry at #{@time_entry.toString}: #{@entry}"
   end
 
 end
