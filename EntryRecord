@@ -29,8 +29,12 @@ class EntryRecord
   
   public
   def print_record
-    @entry_arr.each { |entry| puts entry.entryString }
+    @entry_arr.each { |entry| puts entry.entryString
+        if entry.is_a?(Event)
+            puts entry.eventString 
+        end}
       #for each element named entry in @entry_arr, puts entry
+      #if entry is an event, puts the eventString as well    
   end
 
 end
