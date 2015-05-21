@@ -12,7 +12,7 @@ class Time
 	def verify_time
 		#verifies that the actual parameters were numbers
 		check = Proc.new {|time|
-			until time.is_a?(Integer) && time > 0
+			until time.is_a?(Integer) && time >= 0
 				puts "#{time} was an invalid input. Please enter a positive integer."
 				time = gets.chomp
 			end}
