@@ -1,6 +1,6 @@
 class EntryRecord
 
-  initialize
+  def initialize
     @entry_arr = Array.new
     @num_of_entries = @entry_arr.length
   end
