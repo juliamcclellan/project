@@ -1,6 +1,9 @@
 class Event < Entry
   
-  def initialize(name_event, time_event)
+  def initialize(time_entry, name, entry, name_event, time_event)
+    @time_entry = time_entry
+    @name = name
+    @entry = entry
     @name_event = name_event
     @time_event = time_event
   end
@@ -10,7 +13,7 @@ class Event < Entry
   #end
   
   def eventString
-    "#{name_event}(#{entry}) will happen at #{time_event}, hosted by #{name}"
+    "#{@name_event}(#{@entry}) will happen at #{@time_event.toString}, hosted by #{@name}"
     #Note that no return statement is needed because Ruby without a return statement, ruby by default returns the last evaluated expression 
   end
   
