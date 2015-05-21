@@ -8,10 +8,6 @@ class Event < Entry
     @time_event = time_event
   end
   
-  #def add_event_detail(name_detail, detail)
-  #  @#{name_detail} = detail
-  #end
-  
   def eventString
     "#{@name_event}(#{@entry}) will happen at #{@time_event.toString}, hosted by #{@name}"
     #Note that no return statement is needed because Ruby without a return statement, ruby by default returns the last evaluated expression 
