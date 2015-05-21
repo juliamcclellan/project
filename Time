@@ -46,12 +46,6 @@ class Time
 		end
 	end
 	
-	attr_reader :@minute
-	attr_reader :@hour
-	attr_reader :@day
-	attr_reader :@month
-	attr_reader :@year
-	
 	def toString
 		"#{@hour}:#{@minute}, #{@month}/#{@day}/#{@year}"
 	end
