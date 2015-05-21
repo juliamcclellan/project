@@ -1,16 +1,11 @@
 class Event < Entry
   
   def initialize(time_entry, name, entry, name_event, time_event)
-    @time_entry = time_entry
-    @name = name
-    @entry = entry
+    #to call the constructor of the superclass, use super.initialize
+    super.initialize(time_entry, name, entry)
     @name_event = name_event
     @time_event = time_event
   end
-  
-  #def add_event_detail(name_detail, detail)
-  #  @#{name_detail} = detail
-  #end
   
   def eventString
     "#{@name_event}(#{@entry}) will happen at #{@time_event.toString}, entered by #{@name}"
