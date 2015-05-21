@@ -1,6 +1,6 @@
 class Entry
   
-  initialize(time_entry, name, entry)
+  def initialize(time_entry, name, entry)
     @time_entry = time_entry
     @name = name
     @entry = entry
@@ -14,5 +14,4 @@ class Entry
     "#{name} made an entry at #{time_entry}: entry"
   end
 
-#to end the class, use $end instead of just end
-$end
+end
