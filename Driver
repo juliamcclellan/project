@@ -4,8 +4,8 @@ time_graduation = Time.new(0, 11, 31, 5, 15)
 time_entered_presentation = Time.new(18, 11, 19, 5, 15)
 time_entered_graduation = Time.new(22, 11, 19, 5, 15)
 
-presentation = Event.new(time_entered_presentation, "Julia and Lily", "Lily and Julia will tell the class about learning Ruby and their program.", time_presentation, "Presentation")
-graduation = Event.new(time_entered_graduation, "Julia and Lily", "Middlesex school class of 2015 will graduate.", time_graduation, "Graduation")
+presentation = Event.new(time_entered_presentation, "Julia and Lily", "Lily and Julia will tell the class about learning Ruby and their program", "Presentation", time_presentation)
+graduation = Event.new(time_entered_graduation, "Julia and Lily", "Middlesex school class of 2015 will graduate", "Graduation", time_graduation)
 
 calendar = EntryRecord.new
 
