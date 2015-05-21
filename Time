@@ -12,48 +12,48 @@ class Time
 	def verify_time
 		#verifies that the actual parameters were numbers
 		check = Proc.new {|time|
-			until time.is_a? Integer && time > 0
+			until time.is_a?(Integer) && time > 0
 				puts "#{time} was an invalid input. Please enter a positive integer."
 				time = gets.chomp
 			end}
-		[minute, hour, day, month, year].each(&check)
+		[@minute, @hour, @day, @month, @year].each(&check)
 		
 		#checks whether the numbers entered are valid and changes them if they are not
-		if minute > 60
-			hour += (minute / 60).floor
-			minute %= 60
+		if @minute > 60
+			@hour += (@minute / 60).floor
+			@minute %= 60
 		end
-		if hour > 24
-			day += (hour / 24).floor
-			hour %= 24
+		if @hour > 24
+			@day += (@hour / 24).floor
+			@hour %= 24
 		end
 		
 		#checks the day differently depending on what month in is
-		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && (day > 31)
-			month += (day / 31).floor
-			day %= 31
-		elsif month != 2 && day > 30
-			month += (day / 30).floor
-			day %= 30
-		elsif day > 28
-			month += (day / 28).floor
-			day %= 28
+		if (@month == 1 || @month == 3 || @month == 5 || @month == 7 || @month == 8 || @month == 10 || @month == 12) && (@day > 31)
+			@month += (@day / 31).floor
+			@day %= 31
+		elsif @month != 2 && @day > 30
+			@month += (@day / 30).floor
+			@day %= 30
+		elsif @day > 28
+			@month += (@day / 28).floor
+			@day %= 28
 		end
 		
-		if month > 12
-			year += (month / 12).floor
-			month %= 12
+		if @month > 12
+			@year += (@month / 12).floor
+			@month %= 12
 		end
 	end
 	
-	attr_reader :minute
-	attr_reader :hour
-	attr_reader :day
-	attr_reader :month
-	attr_reader :year
+	attr_reader :@minute
+	attr_reader :@hour
+	attr_reader :@day
+	attr_reader :@month
+	attr_reader :@year
 	
 	def toString
-		"#{hour}:#{minute}, #{month}/#{day}/#{year}"
+		"#{@hour}:#{@minute}, #{@month}/#{@day}/#{@year}"
 	end
 	
 end
