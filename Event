@@ -2,7 +2,7 @@ class Event < Entry
   
   def initialize(time_entry, name, entry, name_event, time_event)
     #to call the constructor of the superclass, use super.initialize
-    super.initialize(time_entry, name, entry)
+    super(time_entry, name, entry)
     @name_event = name_event
     @time_event = time_event
   end
